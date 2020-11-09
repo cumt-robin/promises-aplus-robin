@@ -1,0 +1,25 @@
+{
+  "name": "promises-aplus-robin",
+  "version": "1.0.0",
+  "description": "promises-aplus-robin is a lightweight Promises/A+ implementation that is able to detect circular thenable chain.",
+  "main": "promise-aplus-robin.js",
+  "scripts": {
+    "test": "promises-aplus-tests promises-aplus-robin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cumt-robin/promises-aplus-robin.git"
+  },
+  "keywords": [
+    "promises-aplus"
+  ],
+  "author": "tusi666",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cumt-robin/promises-aplus-robin/issues"
+  },
+  "homepage": "https://github.com/cumt-robin/promises-aplus-robin#readme",
+  "devDependencies": {
+    "promises-aplus-tests": "^2.1.2"
+  }
+}
