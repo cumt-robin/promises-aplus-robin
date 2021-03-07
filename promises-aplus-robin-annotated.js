@@ -78,11 +78,14 @@ function transition(promise, targetState, value) {
           try {
             if (typeof handler === 'function') {
               const adoptedValue = handler(value)
+              // 异步回调返回的值将决定衍生的Promise的状态
               resolvePromiseWithValue(chainedPromise, adoptedValue)
             } else {
+              // 存在调用了then，但是没传回调作为参数的可能，此时衍生的Promise的状态直接采纳其关联的Promise的状态。
               transition(chainedPromise, PROMISE_STATES.FULFILLED, promise.value)
             }
           } catch (error) {
+            // 如果回调抛出了异常，此时直接将衍生的Promise的状态转移为rejected，并用异常error作为reason
             transition(chainedPromise, PROMISE_STATES.REJECTED, error)
           }
         })
@@ -259,6 +262,18 @@ class MyPromise {
     // 返回它
     return promise2;
   }
+}
+
+MyPromise.resolve = function(x) {
+  return new MyPromise((resolve) => {
+    resolve(x)
+  })
+}
+
+MyPromise.reject = function(reason) {
+  return new MyPromise((resolve, reject) => {
+    reject(reason)
+  })
 }
 
 module.exports = {

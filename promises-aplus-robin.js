@@ -189,6 +189,18 @@ class MyPromise {
   }
 }
 
+MyPromise.resolve = function(x) {
+  return new MyPromise((resolve) => {
+    resolve(x)
+  })
+}
+
+MyPromise.reject = function(reason) {
+  return new MyPromise((resolve, reject) => {
+    reject(reason)
+  })
+}
+
 module.exports = {
   resolved: function (value) {
     return new MyPromise(function (resolve) {

@@ -12,8 +12,8 @@
 - [x] detecting thenable cycle
 - [ ] `MyPromise.prototype.catch`
 - [ ] `MyPromise.prototype.finally`
-- [ ] `MyPromise.resolve`
-- [ ] `MyPromise.reject`
+- [x] `MyPromise.resolve`
+- [x] `MyPromise.reject`
 - [ ] `MyPromise.all`
 - [ ] `MyPromise.race`
 - [ ] ......
