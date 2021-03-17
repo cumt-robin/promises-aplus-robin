@@ -22,7 +22,31 @@
 
 - raw version: [promises-aplus-robin.js](https://github.com/cumt-robin/promises-aplus-robin/blob/main/promises-aplus-robin.js)
 - annotated version: [promises-aplus-robin-annotated.js](https://github.com/cumt-robin/promises-aplus-robin/blob/main/promises-aplus-robin-annotated.js)
-- extended version: [promises-aplus-robin-annotated.js](https://github.com/cumt-robin/promises-aplus-robin/blob/main/promises-aplus-robin-extended.js)
+- extended version: [promises-aplus-robin-extended.js](https://github.com/cumt-robin/promises-aplus-robin/blob/main/promises-aplus-robin-extended.js)
+- hack version: [promises-aplus-robin-extended.js](https://github.com/cumt-robin/promises-aplus-robin/blob/main/promises-aplus-robin-hack.js)
+
+The hack version is used for adapting the following case. The explanation can be found at [我以为我很懂Promise，直到我开始实现Promise/A+规范](https://juejin.cn/post/6937076967283884040#heading-17).
+
+```javascript
+Promise.resolve().then(() => {
+    console.log(0);
+    return Promise.resolve(4);
+}).then((res) => {
+    console.log(res)
+})
+
+Promise.resolve().then(() => {
+    console.log(1);
+}).then(() => {
+    console.log(2);
+}).then(() => {
+    console.log(3);
+}).then(() => {
+    console.log(5);
+}).then(() =>{
+    console.log(6);
+})
+```
 
 ## Testing
 
