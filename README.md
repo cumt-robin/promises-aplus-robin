@@ -23,7 +23,7 @@
 - raw version: [promises-aplus-robin.js](https://github.com/cumt-robin/promises-aplus-robin/blob/main/promises-aplus-robin.js)
 - annotated version: [promises-aplus-robin-annotated.js](https://github.com/cumt-robin/promises-aplus-robin/blob/main/promises-aplus-robin-annotated.js)
 - extended version: [promises-aplus-robin-extended.js](https://github.com/cumt-robin/promises-aplus-robin/blob/main/promises-aplus-robin-extended.js)
-- hack version: [promises-aplus-robin-extended.js](https://github.com/cumt-robin/promises-aplus-robin/blob/main/promises-aplus-robin-hack.js)
+- hack version: [promises-aplus-robin-hack.js](https://github.com/cumt-robin/promises-aplus-robin/blob/main/promises-aplus-robin-hack.js)
 
 The **extended version** is used for supporting some features that is excluded in Promises/A+ standard but can be found in modern browsers.
 
